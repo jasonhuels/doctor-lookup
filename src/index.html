@@ -8,17 +8,19 @@
       <h1>Doctor Lookup</h1>
     </div>
     <div class="container">
-      <form class="search" action="index.html" method="post">
-        <label for="symptom">Symptoms:</label>
-        <input type="text" id="symptoms" placeholder="Symptoms..."><br>
-        <label for="docor-name">Doctor's Name:</label>
-        <input type="text" id="doctor-name" placeholder="Doctor's Name">
-        <label for="specialty">Specialty:</label>
-        <input type="text" id="specialty" placeholder="Specialty...">
-        <button type="submit" id="submit">Submit</button>
-      </form>
+      <div class="card">
+        <form id="search" action="index.html" method="post">
+          <label for="symptom">Symptoms:</label><br>
+          <input type="text" id="symptoms" placeholder="Symptoms..."><br>
+          <label for="docor-name">Doctor's Name:</label><br>
+          <input type="text" id="doctor-name" placeholder="Doctor's Name"><br>
+          <label for="specialty">Specialty:</label><br>
+          <input type="text" id="specialty" placeholder="Specialty...">
+          <button type="submit" id="submit" class="btn btn-light">Submit</button>
+        </form>
+      </div>
 
-      <div id="results">
+      <div id="results" class="showErrors">
 
       </div>
 

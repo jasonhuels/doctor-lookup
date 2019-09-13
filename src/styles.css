@@ -1,16 +1,8 @@
-.card img {
-  height: 200px;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
 .card {
-  height: 200px;
-  width: 200px;
   background-color: #383838;
   border-radius: 10px;
   border: solid 3px #000000;
+  color: white
 }
 .jumbotron {
   background-color: grey;
@@ -18,13 +10,15 @@
   color: white;
   text-shadow: 3px 3px black;
 }
-#gif {
-  display: block;
-  margin-left: auto;
-  /* margin-right: auto; */
-  padding-bottom: 20px;
-  height: 300px;
-  width: 400px;
+
+input {
+  width: 75%;
+}
+
+#submit {
+  float: right;
+  width: 200px;
+  margin-right: 20px;
 }
 
 body {
