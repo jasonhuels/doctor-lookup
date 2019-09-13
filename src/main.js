@@ -4,7 +4,6 @@ import './styles.css';
 import $ from 'jquery';
 import {Search} from './search.js';
 import {Specialties} from './getSpecialties.js';
-import {Conditions} from './getConditions.js';
 
 $(function() {
   const specialties = new Specialties();
