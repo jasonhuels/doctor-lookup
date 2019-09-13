@@ -1,17 +1,22 @@
 # _Doctor Lookup_
 
-#### _... , 13-September-2019_
+#### _A website that helps people in the Portland area find a doctor , 13-September-2019_
 
 #### By _**Jason Huels**_
 
 ## Description
 
-_..._
+_A website where a user can search for doctors in the Portland area by entering in their symptoms and/or a doctors name._
 
 ## Specifications
 
 | Behavior | Input | Output|
 |---:---|---:---|---:---|
+|User enters no values and receives no results| "" | "No matches found" |
+|User enters just a symptom| User receives doctors that treat that symptom| "X Doctors Found ..."|
+|User enters in a Doctor's name that finds no matches| "Emmett Brown"| "No matches found"|
+|User enters a Doctor's name that is found | "Phil McGraw" | "Dr. Phil ..."|
+|User enters in Doctor's name and a symptom | "Phil McGraw" "I want to meet Oprah" | "Dr. Phil ..."|
 
 
 ## Setup/Installation Requirements_

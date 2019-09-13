@@ -1,8 +1,8 @@
-export class Memory {
-  getGifs() {
+export class Search {
+  findDoctor() {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `http://api.giphy.com/v1/gifs/random?api_key=${process.env.API_KEY}`;
+      const url = `http://api.giphy.com/v1/gifs/random?api_key=${process.env.exports.apiKey}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);

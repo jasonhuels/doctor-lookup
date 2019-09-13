@@ -2,13 +2,13 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
-import {Memory} from './memory-game.js';
+import {Search} from './search.js';
 
 $(function() {
 
-  $('#button').click(function() {
-    let memory = new Memory();
-    let promise = memory.getGifs();
+  $('#submit').click(function() {
+    let search = new Search();
+    let promise = search.findDoctor();
     promise.then(function(response) {
       const body = JSON.parse(response);
 
