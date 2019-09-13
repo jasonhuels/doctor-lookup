@@ -10,13 +10,13 @@ _A website where a user can search for doctors in the Portland area by entering 
 
 ## Specifications
 
-| Behavior | Input | Output|
+| Behavior | Input | Output |
 |---:---|---:---|---:---|
-|User enters no values and receives no results| "" | "No matches found" |
-|User enters just a symptom| User receives doctors that treat that symptom| "X Doctors Found ..."|
-|User enters in a Doctor's name that finds no matches| "Emmett Brown"| "No matches found"|
-|User enters a Doctor's name that is found | "Phil McGraw" | "Dr. Phil ..."|
-|User enters in Doctor's name and a symptom | "Phil McGraw" "I want to meet Oprah" | "Dr. Phil ..."|
+| User enters no values and receives no results | "" | "No matches found" |
+| User enters just a symptom | User receives doctors that treat that symptom | "X Doctors Found ..."|
+| User enters in a Doctor's name that finds no matches | "Emmett Brown" | "No matches found"|
+| User enters a Doctor's name that is found | "Phil McGraw" | "Dr. Phil ..."|
+| User enters in Doctor's name and a symptom | "Phil McGraw" "I want to meet Oprah" | "Dr. Phil ..."|
 
 
 ## Setup/Installation Requirements_

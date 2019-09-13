@@ -19,6 +19,7 @@ input {
 
 #submit {
   float: right;
+  /* margin-left: 70%; */
   width: 200px;
   margin: 20px;
 }
@@ -55,4 +56,12 @@ body {
 .doctor img {
   border: solid 3px black;
   border-radius: 10px;
+}
+
+label {
+  padding: 5px;
+}
+
+.quantity {
+  margin-left: 80%
 }

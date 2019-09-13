@@ -1,8 +1,8 @@
-export class Search {
-  findDoctor(symptoms, name, specialty, quantity) {
+export class Conditions {
+  getConditions() {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${symptoms}&specialty_uid=${specialty}&location=or-portland&user_location=45.505,-122.675&skip=0&limit=${quantity}&user_key=${process.env.exports.apiKey}`;
+      const url = `https://api.betterdoctor.com/2016-03-01/specialties?user_key=${process.env.exports.apiKey}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);

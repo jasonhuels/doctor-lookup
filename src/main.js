@@ -4,6 +4,7 @@ import './styles.css';
 import $ from 'jquery';
 import {Search} from './search.js';
 import {Specialties} from './getSpecialties.js';
+import {Conditions} from './getConditions.js';
 
 $(function() {
   const specialties = new Specialties();
@@ -23,13 +24,14 @@ $(function() {
     const symptoms = $("#symptoms").val();
     const name = $("#doctor-name").val();
     const special = $("#specialty").val();
+    const quantity = $("#quantity").val();
     console.log(special);
     let resultsHTML = "";
     $("#search").trigger("reset");
 
     if(symptoms || name || special) {
       const search = new Search();
-      const promise = search.findDoctor(symptoms, name, special);
+      const promise = search.findDoctor(symptoms, name, special, quantity);
       promise.then(function(response) {
         const body = JSON.parse(response);
         if(body.data.length > 0) {
