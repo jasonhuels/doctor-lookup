@@ -2,7 +2,8 @@
   background-color: #383838;
   border-radius: 10px;
   border: solid 3px #000000;
-  color: white
+  color: white;
+  margin: 10px;
 }
 .jumbotron {
   background-color: grey;
@@ -27,4 +28,28 @@ body {
 
 .container {
   padding-bottom: 50px;
+}
+
+.col-md-5 {
+  margin: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+}
+
+.personal {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+}
+
+.personal img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.professional {
+  text-align: right;
 }
