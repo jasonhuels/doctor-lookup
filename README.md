@@ -23,6 +23,7 @@ _A website where a user can search for doctors in the Portland area by entering 
 
 * _Clone this repository_
 * _Run "npm install" command to install necessary packages_
+* _Create a .env file with your betterdoctor api key saved to a variable called exports.apiKey_
 * _Run "npm run start" command to open application in browser_
 
 ## Known Bugs

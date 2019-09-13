@@ -3,9 +3,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 import {Search} from './search.js';
-import {Practice} from './practice.js';
+import {Specialties} from './getSpecialties.js';
 
 $(function() {
+  const specialties = new Specialties();
+  const specialPromise = specialties.getSpecialties();
+  specialPromise.then(function(response) {
+    const body = JSON.parse(response);
+    for(let i=0; i<body.data.length; i++) {
+      $("#specialty").append(`<option value=${body.data[i].uid}>${body.data[i].name}</option>`);
+    }
+  }, function(error) {
+    $('.showErrors').text(`There was an error processing your request: ${error.message}`);
+  });
 
   $('#search').submit(function(event) {
     event.preventDefault();
@@ -13,6 +23,7 @@ $(function() {
     const symptoms = $("#symptoms").val();
     const name = $("#doctor-name").val();
     const special = $("#specialty").val();
+    console.log(special);
     let resultsHTML = "";
     $("#search").trigger("reset");
 
@@ -41,7 +52,13 @@ $(function() {
             let state = body.data[i].practices[index].visit_address.state;
             let zip = body.data[i].practices[index].visit_address.zip;
             let phone = body.data[i].practices[index].phones[0].number;
-            let website = body.data[i].practices[index].website || "(no website available)";
+            phone = `(${phone.substring(0,3)})${phone.substring(3,6)}-${phone.substring(6, 10)}`;
+            let website = body.data[i].practices[index].website;
+            if(website) {
+              website = `<a href="${website}">${website}</a>`
+            } else {
+              website = "(no website available)"
+            }
             let newPatients = "";
             if(body.data[i].practices[0].accepts_new_patients) {
               newPatients = "Currently accepting new patients.";
@@ -49,25 +66,7 @@ $(function() {
               newPatients = "Sorry, not currently accepting new patients.";
             }
 
-            resultsHTML += `
-            <div class="card doctor row">
-            <div class="row">
-            <div class="col-md-5 personal">
-            <img src='${img}' alt="doctor">
-            <p>${firstName} ${lastName}<br>${specialty}</p>
-            </div>
-
-            <div class="col-md-5 professional">
-            <p>${address}<br>${city}, ${state} ${zip}
-            <br>${phone}
-            <br>${website}
-            <br>${newPatients}
-            </p>
-            </div>
-
-            </div>
-            </div>
-            `;
+            resultsHTML += `<div class="card doctor row"><div class="row"><div class="col-md-5 personal"><img src='${img}' alt="doctor"><p>${firstName} ${lastName}<br>${specialty}</p></div><div class="col-md-5 professional"><p>${address}<br>${city}, ${state} ${zip}<br>${phone}<br>${website}<br>${newPatients}</p></div></div></div>`;
           }
           $("#results").html(resultsHTML);
             console.log(body);
@@ -81,7 +80,5 @@ $(function() {
     } else {
       $("#results").html('<div class="card"> <h3>No doctors meet the criteria.</h3> </div>');
     }
-
   });
-
 });

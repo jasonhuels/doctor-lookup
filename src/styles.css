@@ -4,6 +4,7 @@
   border: solid 3px #000000;
   color: white;
   margin: 10px;
+  padding: 10px;
 }
 .jumbotron {
   background-color: grey;
@@ -19,7 +20,7 @@ input {
 #submit {
   float: right;
   width: 200px;
-  margin-right: 20px;
+  margin: 20px;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
   margin-top: auto;
   margin-bottom: auto;
   display: block;
+  padding: 10px;
 }
 
 .personal {
@@ -50,6 +52,7 @@ body {
   display: block;
 }
 
-/* .professional {
-  text-align: right;
-} */
+.doctor img {
+  border: solid 3px black;
+  border-radius: 10px;
+}
