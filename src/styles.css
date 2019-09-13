@@ -7,10 +7,23 @@
   padding: 10px;
 }
 .jumbotron {
-  background-color: grey;
+  background-color: teal;
   text-align: center;
   color: white;
   text-shadow: 3px 3px black;
+}
+h1 {
+  font-size: 100px;
+  color: lightblue;
+  font-family: courier;
+  font-weight: bold;
+}
+
+a {
+  color: lightblue;
+}
+a:hover {
+  color: teal;
 }
 
 input {
@@ -25,7 +38,7 @@ input {
 }
 
 body {
-  background-color: lightgrey;
+  background-color: lightblue;
 }
 
 .container {

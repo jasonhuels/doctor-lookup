@@ -24,7 +24,6 @@ $(function() {
     const name = $("#doctor-name").val();
     const special = $("#specialty").val();
     const quantity = $("#quantity").val();
-    console.log(special);
     let resultsHTML = "";
     $("#search").trigger("reset");
 
@@ -70,7 +69,6 @@ $(function() {
             resultsHTML += `<div class="card doctor row"><div class="row"><div class="col-md-5 personal"><img src='${img}' alt="doctor"><p>${firstName} ${lastName}<br>${specialty}</p></div><div class="col-md-5 professional"><p><a href="https://www.google.com/maps/place/${address} ${city} ${state} ${zip}">${address}<br>${city}, ${state} ${zip}</a><br>${phone}<br>${website}<br>${newPatients}</p></div></div></div>`;
           }
           $("#results").html(resultsHTML);
-            console.log(body);
         } else {
           $("#results").html('<div class="card"> <h3>No doctors meet the criteria.</h3> </div>');
         }
