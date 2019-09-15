@@ -66,7 +66,18 @@ $(function() {
               newPatients = "Sorry, not currently accepting new patients.";
             }
 
-            resultsHTML += `<div class="card doctor row"><div class="row"><div class="col-md-5 personal"><img src='${img}' alt="doctor"><p>${firstName} ${lastName}<br>${specialty}</p></div><div class="col-md-5 professional"><p><a href="https://www.google.com/maps/place/${address} ${city} ${state} ${zip}">${address}<br>${city}, ${state} ${zip}</a><br>${phone}<br>${website}<br>${newPatients}</p></div></div></div>`;
+            resultsHTML +=
+            `<div class="card doctor row">
+              <div class="row">
+                <div class="col-md-5 personal">
+                  <img src='${img}' alt="doctor">
+                  <p>${firstName} ${lastName}<br>${specialty}</p>
+                </div>
+                <div class="col-md-5 professional">
+                  <p><a href="https://www.google.com/maps/place/${address} ${city} ${state} ${zip}">${address}<br>${city}, ${state} ${zip}</a><br>${phone}<br>${website}<br>${newPatients}</p>
+                </div>
+              </div>
+            </div>`;
           }
           $("#results").html(resultsHTML);
         } else {
